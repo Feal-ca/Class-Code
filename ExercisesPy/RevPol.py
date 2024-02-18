@@ -1,14 +1,8 @@
 from dataclasses import dataclass
 
 
-@dataclass
-class Queue:
-    front: list[int]
-    rear: list[int]
-
-
 def evaluate_exp(e: list[str]) -> None:
-    queue = []
+    ue = []
     for s in e:
         if s == "+":
             queue.append(queue.pop() + queue.pop())
