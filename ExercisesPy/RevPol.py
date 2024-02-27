@@ -1,8 +1,5 @@
-from dataclasses import dataclass
-
-
-def evaluate_exp(e: list[str]) -> None:
-    ue = []
+def evaluate_exp(e):
+    queue = []
     for s in e:
         if s == "+":
             queue.append(queue.pop() + queue.pop())
@@ -18,8 +15,7 @@ def evaluate_exp(e: list[str]) -> None:
 
 def main() -> None:
     while True:
-        a = input()
-        a = a.split(" ")
+        a = input().split(" ")
         evaluate_exp(a)
 
 
