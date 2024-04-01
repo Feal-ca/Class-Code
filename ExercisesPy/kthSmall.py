@@ -11,6 +11,8 @@ def select(k: int, A: list[int], B: list[int]) -> int:
 
     while True:
 
+        print(l1, r1)
+        print(l2, r2)
         if l1 > r1:
             return B[l2 + k - 1]
         if l2 > r2:
