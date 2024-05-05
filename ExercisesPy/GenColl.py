@@ -51,7 +51,7 @@ def collatz_first_common(n1: int, n2: int) -> int:
 
 
 def collatz_common_elements(n1: int, n2: int) -> int:
-    return sum(1 for x in collatz(n1) for y in collatz(n2) if x == y)
+    return len(set(collatz(n1)) & set(collatz(n2)))
 
 
 def collatz_union(n1: int, n2: int) -> list[int]:
@@ -103,6 +103,7 @@ def main() -> None:
             print(collatz_first_missing(read(int)))
         else:
             assert False
+
 
 main()
 main()
