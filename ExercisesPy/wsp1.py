@@ -29,7 +29,7 @@ def main():
             G[u].append((cost,v))
         s,e = read(int),read(int)
         d = short_path(G,s,e)
-        print(f"{d}" if d else f"no path from {s} to {e}")
+        print(f"{d}" if d is not None else f"no path from {s} to {e}")
 
 if __name__ == "__main__":
     main()

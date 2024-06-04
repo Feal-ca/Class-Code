@@ -44,7 +44,10 @@ def main():
         s,e = read(int),read(int)
         d = short_path(G,s,e)
         if len(d) > 0:
-            print(*d)
+            for e in d[0:-1]:
+                print(e, end = " ")
+            print(d[-1])
+
         else: print(f"no path from {s} to {e}")
 
 if __name__ == "__main__":
